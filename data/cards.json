@@ -1,0 +1,32 @@
+[
+   {
+        "name": "Ace",
+        "description": "This is the first card.",
+        "image": ".../assets/imageace.jpeg"
+     },
+     {
+        "name": "Jay",
+        "description": "This is the second card.",
+        "image": ".../assets/imagejayj.jpeg"
+     },
+     {
+        "name": "Kay",
+        "description": "This is the third card.",
+        "image": ".../assets/imagekay.jpeg"
+     },
+        {
+            "name": "Em",
+            "description": "This is the fourth card.",
+            "image": ".../assets/imageem.jpeg"
+        },
+        {
+            "name": "Jay",
+            "description": "This is the fifth card.",
+            "image": ".../assets/imagejay.jpeg"
+        },
+        {
+            "name": "Kay",
+            "description": "This is the sixth card.",
+            "image": ".../assets/imagekay.jpeg"
+   }
+]

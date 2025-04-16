@@ -1,7 +1,7 @@
 body {
     min-height: 100vh;
     min-height: 100vh;
-    background-color: aqua ;
+    background-color: black ;
     color: white;
 }
 
@@ -27,7 +27,7 @@ p {
     padding: 8px 16px;
     font-size: 30px;
     border-radius: 10px;
-    background-color: aquamarine;
+    background-color: cyan;
     color: white;
 }
 
@@ -35,8 +35,8 @@ p {
     display: grid;
     justify-content: center;
     grid-gap: 16px;
-    grid-template-columns: repeat(6, 140px);
-    grid-template-rows: repeat(2, calc(140px / 2 * 3));
+    grid-template-columns: repeat(4, 140px);
+    grid-template-rows: repeat(4, calc(140px / 2 * 3));
 }
 
 .card {

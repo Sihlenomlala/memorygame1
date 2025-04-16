@@ -6,7 +6,7 @@ let score = 0;
 
  document.querySelector (".score") .textContent = score;
 
-  fetch('card.json') 
+  fetch("./data/cards.json") 
     //  .then (async (response) => {
     //     const contenType = response.headers.get ('content-type');
     //     console.log ('Response Content-Type:', contenType);
@@ -24,7 +24,7 @@ let score = 0;
     //  });
      .then ((res) => res.json())
      .then ((data) => {
-        card = [...data.photos,...data.photos];
+        cards = [...data, ...data];
         shuffleCards();
         generateCards ();  
     });
@@ -43,6 +43,7 @@ let score = 0;
     }
 }
 
+
 function generateCards () {
     for (let card of cards) {
         const cardElement = document.createElement ("div");
@@ -52,10 +53,10 @@ function generateCards () {
             <div class = "front"> 
                 <img class = "front-image" src = ${card.image} /> 
             </div>
-             <div class = "back">  </div>
+             <div class = "back"></div>
              `;
              gridContainer.appendChild(cardElement);
-                cardElement.addEventListener ("click", flipCard);
+            cardElement.addEventListener ("click", flipCard);
     }
 }
 
@@ -63,7 +64,7 @@ function flipCard() {
     if (lockBoard) return;
     if (this === firstCard) return;
 
-    this.classList.add("flip");
+    this.classList.add("flipped");
 
     if (!firstCard) {
         firstCard = this;
@@ -94,8 +95,8 @@ function disableCards() {
 
 function unflipCards() {
     setTimeout(() => {
-        firstCard.classList.remove("flip");
-        secondCard.classList.remove("flip");
+        firstCard.classList.remove("flipped");
+        secondCard.classList.remove("flipped");
 
         resetBoard();
     }, 1000);
